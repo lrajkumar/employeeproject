@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -23,7 +24,7 @@ public class Employee_controller {
 	}
 
 	@GetMapping(value = "/show/{id}")
-	public Employee getDetails(@PathVariable int id) {
+	public Employee getDetails(@PathVariable int id ) {
 		return empser.getDetails(id);
 	}
 
