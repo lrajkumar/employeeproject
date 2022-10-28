@@ -28,6 +28,11 @@ public class Employee_Dao {
 	  return "Data has been deleted";
   }
   
+  public List<Employee> getList() {
+		return emprepo.findAll();
+	}
+  
+  
   public List<Employee> getBySal(int sal1,int sal2){
 	 return emprepo.getBySal(sal1,sal2);
   }

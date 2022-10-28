@@ -24,6 +24,7 @@ public class Employee {
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -45,6 +46,11 @@ public class Employee {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	
+	
+	
+	
+	
 	private String name;
 	private int salary;
 	private int age;
