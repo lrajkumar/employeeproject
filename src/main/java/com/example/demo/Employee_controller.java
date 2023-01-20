@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:8081")
+@RequestMapping("/Employee")
 public class Employee_controller {
 
 	@Autowired
@@ -49,7 +52,7 @@ public class Employee_controller {
 		return empser.getList();
 		}
 	
-	static Logger log =Logger.getLogger(Employee_controller.class);
+	/*static Logger log =Logger.getLogger(Employee_controller.class);
 	
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
     public ModelAndView test() {
@@ -59,7 +62,7 @@ public class Employee_controller {
         log.error("This is an error log entry");
          
         return model;
-    }
+    }*/
 
 	
 	
